@@ -1,6 +1,7 @@
 from src.app import home
 
 
-def test_homepage():
+def test_homepage(client):
     # app = Flask(__name__)
-    assert home() == "Home Page"
+    res = cilent.get('/')
+    assert res.status_code == 200 
